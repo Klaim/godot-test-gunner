@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5j8htgglbiwy"]
+
+[ext_resource type="PackedScene" uid="uid://uc7n47btyl34" path="res://gun.tscn" id="1_klsi6"]
+[ext_resource type="Script" path="res://player.gd" id="1_n1seg"]
+[ext_resource type="Texture2D" uid="uid://cqk4ud7aokl36" path="res://icon.svg" id="1_yulqv"]
+
+[node name="player" type="Node2D"]
+script = ExtResource("1_n1seg")
+
+[node name="gun_arm" type="Node2D" parent="."]
+
+[node name="gun_position" type="Node2D" parent="gun_arm"]
+position = Vector2(231, -25)
+
+[node name="gun" parent="gun_arm/gun_position" instance=ExtResource("1_klsi6")]
+
+[node name="ColorRect" type="ColorRect" parent="gun_arm"]
+offset_left = 3.0
+offset_top = -16.0
+offset_right = 242.0
+offset_bottom = 24.0
+
+[node name="graphics" type="Node2D" parent="."]
+
+[node name="Icon" type="Sprite2D" parent="graphics"]
+position = Vector2(-1, -2)
+texture = ExtResource("1_yulqv")

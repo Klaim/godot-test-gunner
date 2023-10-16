@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bf84r55rt4ms"]
+
+[ext_resource type="Texture2D" uid="uid://cqk4ud7aokl36" path="res://icon.svg" id="1_4w3ev"]
+[ext_resource type="Script" path="res://bullet.gd" id="1_n2fwa"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7qmn6"]
+blend_mode = 3
+light_mode = 1
+
+[node name="bullet" type="Node2D"]
+script = ExtResource("1_n2fwa")
+
+[node name="Icon" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_7qmn6")
+position = Vector2(4.76837e-07, 2.38419e-07)
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("1_4w3ev")
