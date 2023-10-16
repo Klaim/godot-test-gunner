@@ -10,10 +10,10 @@ func _process(delta):
 	if Input.is_action_just_pressed("player_fire"):
 		fire()
 
+
 func fire():
 	var bullet := bullet_template.instantiate() as Bullet
 	get_tree().root.add_child(bullet)
 	bullet.global_transform = fire_hole.global_transform
-
 
 
